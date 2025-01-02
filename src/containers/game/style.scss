@@ -1,4 +1,7 @@
 $width: 60%;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .home {
   width: 100%;
@@ -44,21 +47,6 @@ $width: 60%;
       column-gap: 35px;
     }
   }
-
-  &.introduce {
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 40px;
-
-    & > .ant-col > .ant-typography {
-      padding-top: 16px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-  }
 }
 
 .searchView {
@@ -79,7 +67,7 @@ $width: 60%;
 .ant-tabs-tab {
   width: calc($width / 4) !important;
   font-weight: 700;
-  color:#FFFFFF;
+  color: #ffffff;
   text-align: center;
   align-items: center;
   display: grid !important;
@@ -119,4 +107,21 @@ $width: 60%;
   &::before {
     border: none !important;
   }
+}
+.crossword-grid {
+  flex-direction: row;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  margin-top: 24px;
+  justify-items: center;
+  align-items: center;
+}
+
+.crossword-cell {
+  border: 3px solid #000;
+  padding: 10px;
+  height: 80px;
+  width: 80px;
+  align-self: center;
+  text-align: center;
 }

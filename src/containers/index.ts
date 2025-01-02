@@ -1,3 +1,2 @@
-import HomePage from './HomePages';
-
-export { HomePage };
+export * from './game/GamePages';
+export * from './welcome/WelcomePages';

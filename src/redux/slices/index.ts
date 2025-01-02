@@ -1,5 +1,3 @@
-import * as userSlice from './userSlice'
+import * as userSlice from './userSlice';
 
-export { 
-    userSlice,
-}
+export { userSlice };

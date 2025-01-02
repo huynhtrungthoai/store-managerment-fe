@@ -1,8 +1,2 @@
-# README
-
-Welcome to new moon power.
-
-### To start this project
-
--   Yarn install
--   Yarn dev
+# crossword-game
+Crossword game for web
