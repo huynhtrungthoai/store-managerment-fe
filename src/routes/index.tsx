@@ -1,7 +1,8 @@
+import { MainLayout } from '@/Layouts/MainLayout';
+import { LoginPages, WelcomePages } from '@/containers';
+import DashboardPages from '@/containers/dashboard/dashboardPages';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { PATH_DASHBOARD } from './paths';
-import { MainLayout } from '@/Layouts/MainLayout';
-import { GamePages, WelcomePages } from '@/containers';
 
 interface IProps {}
 const RootRouter: React.FC<IProps> = () => {
@@ -11,7 +12,10 @@ const RootRouter: React.FC<IProps> = () => {
     <Routes location={location}>
       <Route element={<MainLayout />}>
         <Route path={PATH_DASHBOARD.WELCOME} element={<WelcomePages />} />
-        <Route path={PATH_DASHBOARD.CROSSWORD_GAME} element={<GamePages />} />
+        {/* AUTH */}
+        <Route path={PATH_DASHBOARD.LOGIN} element={<LoginPages />} />
+        {/* ADMIN */}
+        <Route path={PATH_DASHBOARD.DASHBOARD} element={<DashboardPages />} />
       </Route>
     </Routes>
   );

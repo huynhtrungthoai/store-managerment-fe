@@ -26,7 +26,8 @@
       "containers/*": ["src/containers/*"],
       "components/*": ["src/components/*"],
       "shared/*": ["src/@shared/*"],
-      "utils/*": ["src/utilities/*"]
+      "utils/*": ["src/utilities/*"],
+      "themes/*": ["src/themes/*"]
     }
   },
   "include": ["src", ".eslintrc.cjs"],
