@@ -1,0 +1,109 @@
+$mappin: url('../../../../assets/mappin.svg');
+$pin-distance-line: url('../../../../assets/pin-distance-line.svg');
+$date-range: url('../../../../assets/date-range.svg');
+$two-way-vector: url('../../../../assets/two-way-vector.svg');
+
+.ant-tabs-content-holder {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.ant-select {
+  width: 217px !important;
+  height: 75px !important;
+
+  & > .ant-select-selector {
+    height: 100% !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    border: 1px solid #cecece !important;
+
+    & > .ant-select-selection-search {
+      & > .ant-select-selection-search-input {
+        height: 100% !important;
+        width: 70% !important;
+        position: relative;
+        float: right;
+        padding-top: 1em;
+      }
+    }
+
+    & > .ant-select-selection-search::before {
+      display: inline-block;
+      position: absolute;
+      left: 1rem;
+      top: 30%;
+      content: '';
+      width: 24px;
+      height: 24px;
+    }
+
+    & > .ant-select-selection-search::after {
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      display: inline-block;
+      position: absolute;
+      width: fit-content;
+      height: 1.1rem;
+      top: 15%;
+      left: 3.8rem;
+    }
+
+    & > .ant-select-selection-placeholder,
+    .ant-select-selection-item {
+      width: 67%;
+      position: absolute;
+      right: 0;
+      bottom: 1rem;
+    }
+  }
+  & > .ant-select-arrow {
+    display: none;
+  }
+}
+
+.select__input--from > .ant-select > .ant-select-selector {
+  & > .ant-select-selection-search::before {
+    background: $mappin;
+  }
+  & > .ant-select-selection-search::after {
+    content: 'Điểm đi';
+  }
+}
+
+.select__input--to > .ant-select > .ant-select-selector {
+  & > .ant-select-selection-search::before {
+    background: $pin-distance-line;
+  }
+
+  & > .ant-select-selection-search::after {
+    content: 'Điểm đến';
+  }
+}
+
+.select__input--day > .ant-select > .ant-select-selector {
+  & > .ant-select-selection-search::before {
+    background: $date-range;
+  }
+
+  & > .ant-select-selection-search::after {
+    content: 'Số ngày';
+  }
+}
+
+.vector {
+  background: $two-way-vector;
+  width: 22px;
+  height: 17px;
+  margin: auto 10px;
+}
