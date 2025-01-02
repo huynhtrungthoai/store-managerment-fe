@@ -1,5 +1,5 @@
-import React from 'react';
 import { Col, Layout } from 'antd';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 interface IProps {}

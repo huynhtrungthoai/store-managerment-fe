@@ -12,7 +12,7 @@ export const WelcomePages = () => {
   useEffect(() => {
     setTimeout(() => {
       if (isLogin) {
-        navigate(PATH_DASHBOARD.HOME);
+        navigate(PATH_DASHBOARD.DASHBOARD);
       } else {
         navigate(PATH_DASHBOARD.LOGIN);
       }
