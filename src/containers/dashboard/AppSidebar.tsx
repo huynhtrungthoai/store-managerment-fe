@@ -19,6 +19,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from '@/components/ui/sidebar';
+import { PATH_DASHBOARD } from '@/routes/paths';
 import { NavMain } from './NavMain';
 import { NavProjects } from './NavProject';
 import { NavUser } from './NavUser';
@@ -51,6 +52,10 @@ const data = {
       isActive: true,
       items: [
         {
+          title: 'Trang chủ',
+          url: PATH_DASHBOARD.DASHBOARD,
+        },
+        {
           title: 'Doanh thu',
           url: '#',
         },
@@ -71,7 +76,7 @@ const data = {
       items: [
         {
           title: 'Đăng ký ca',
-          url: '#',
+          url: PATH_DASHBOARD.SHIFT,
         },
         {
           title: 'Checkin',

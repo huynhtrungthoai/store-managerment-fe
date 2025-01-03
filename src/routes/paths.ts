@@ -6,4 +6,5 @@ export const PATH_DASHBOARD = {
 
   // ADMIN
   DASHBOARD: '/dashboard',
+  SHIFT: '/dashboard/shift',
 };

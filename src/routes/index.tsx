@@ -1,5 +1,6 @@
+import { DashboardLayout } from '@/Layouts/DashboardLayout';
 import { MainLayout } from '@/Layouts/MainLayout';
-import { LoginPages, WelcomePages } from '@/containers';
+import { LoginPages, ShiftPages, WelcomePages } from '@/containers';
 import DashboardPages from '@/containers/dashboard/dashboardPages';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { PATH_DASHBOARD } from './paths';
@@ -15,7 +16,10 @@ const RootRouter: React.FC<IProps> = () => {
         {/* AUTH */}
         <Route path={PATH_DASHBOARD.LOGIN} element={<LoginPages />} />
         {/* ADMIN */}
+      </Route>
+      <Route element={<DashboardLayout />}>
         <Route path={PATH_DASHBOARD.DASHBOARD} element={<DashboardPages />} />
+        <Route path={PATH_DASHBOARD.SHIFT} element={<ShiftPages />} />
       </Route>
     </Routes>
   );
